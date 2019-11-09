@@ -12,19 +12,29 @@ namespace LeaderTask.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+     
+        public ActionResult Products()
         {
-            ViewBag.Message = "Your application description page.";
-
+            return View();
+        }
+        public ActionResult Login()
+        {
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult ProductsList()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+        public ActionResult Cart()
+        {
+            return View();
+        }
+        public ActionResult Order()
+        {
+            return View();
+        }
+
+
     }
 }

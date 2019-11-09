@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeaderTask.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -13,6 +14,7 @@ namespace LeaderTask
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            config.Filters.Add(new BasicAuthenticationAttribute());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

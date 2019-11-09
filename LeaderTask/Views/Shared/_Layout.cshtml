@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div style="position: relative;" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,13 +21,19 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>  <a href="/home/index">Customers</a>  </li>
+                    <li>  <a href="/home/products">Products</a>  </li>
+                    <li>  <a href="/home/productslist">Products List</a>  </li>
+                    <li>  <a href="/home/order">Orders List</a>  </li>
+                    <li>  <a href="/home/cart">Shopping Cart</a>  </li>
+                    <li>  <a href="/home/login">Login</a>  </li>
+                    <li>  <a id="btn-logout">logout</a>  </li> 
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
+    
         @RenderBody()
         <hr />
         <footer>
@@ -35,8 +41,9 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/3rd_Lib")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+ 

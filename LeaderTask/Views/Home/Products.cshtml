@@ -1,0 +1,161 @@
+﻿
+
+
+<div>
+
+    <div class="col-2">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modalCreate">Create New</button>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <table id="Products" class="table table-bordered table-hover  table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Stock</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+
+    <div id="CreateProductModal" class="modal fade bd-example-modal-lg modalCreate" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="ProdName">Product Name</label>
+                                            <input type="text" class="form-control" id="ProdName" placeholder="Enter Product Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="ProdPrice">Product Price</label>
+                                            <input type="number" class="form-control" id="ProdPrice" placeholder="Enter Product Price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+
+                                        <div class="form-group">
+                                            <label for="ProdStock">Stock</label>
+                                            <input type="number" class="form-control" id="ProdStock" placeholder="Enter Product Stock">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <label for="ProdCategory">Choose Category</label>
+                                            <select id="ProdCategory" class="form-control"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ProdImage">Product Image</label>
+                                    <input type="text" class="form-control" id="ProdImage" placeholder="Enter Photo Url">
+                                </div>
+
+                                <button type="button" id="createProductBTN" class="btn btn-primary">Create</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="EditProductModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="EProdName">Product Name</label>
+                                            <input type="text" class="form-control" id="EProdName" placeholder="Enter Product Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="EProdPrice">Product Price</label>
+                                            <input type="number" class="form-control" id="EProdPrice" placeholder="Enter Product Price">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+
+                                        <div class="form-group">
+                                            <label for="EProdStock">Stock</label>
+                                            <input type="number" class="form-control" id="EProdStock" placeholder="Enter Product Stock">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <label for="EProdCategory">Choose Category</label>
+                                            <select id="EProdCategory" class="form-control"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="EProdImage">Product Image</label>
+                                    <input type="text" class="form-control" id="EProdImage" placeholder="Enter Photo Url">
+                                </div>
+                                <button type="button" id="EditProductBtn" class="btn btn-primary">Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/App/Products.js"></script>
+}
+
+
+ 
