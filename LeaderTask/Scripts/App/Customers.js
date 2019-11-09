@@ -1,12 +1,6 @@
 ﻿$(document).ready(function () {
-    var m = $("#Searcharea").html();
     var Useername = localStorage.Useername;
     var password = localStorage.password;
-
-    $("#customers_filter").replaceWith(m)
-    $('#customers_filter').html($('#Searcharea').html());
-    $('.dataTables_filter').hide();
-
     var EditId;
     var table = $("#customers").DataTable({
         ajax: {
