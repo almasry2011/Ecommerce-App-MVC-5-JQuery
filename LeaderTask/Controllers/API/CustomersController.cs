@@ -11,7 +11,6 @@ using System.Web.Http;
 
 namespace LeaderTask.Controllers.API
 {
-    [BasicAuthentication]
     public class CustomersController : ApiController
     {
         IRepository<Customer> _CustomerRepo;
@@ -24,7 +23,6 @@ namespace LeaderTask.Controllers.API
          var customers=   await  _CustomerRepo.GetAll();
             return Ok(customers);
         }
-        // POST: api/Customers
         public async Task<IHttpActionResult> PostCustomers([FromBody]Customer customer)
         {
             var IsPosted =await _CustomerRepo.Add(customer);
@@ -34,17 +32,11 @@ namespace LeaderTask.Controllers.API
             }
             return BadRequest();
         }
-
-        // GET: api/Customers/5
         public async Task<IHttpActionResult> GetCustomer(int id)
         {
             var customer = await _CustomerRepo.GetById(id);
             return Ok(customer);
         }
-
-
-
-        // PUT: api/Customers/5
         public async Task<IHttpActionResult> PutCustomers(int id, [FromBody]Customer customer)
         {
             var IsUpdated = await _CustomerRepo.Update(id, customer);
