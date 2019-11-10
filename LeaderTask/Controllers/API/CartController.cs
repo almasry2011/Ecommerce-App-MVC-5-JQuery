@@ -41,8 +41,6 @@ namespace LeaderTask.Controllers.API
             }
             return NotFound();
         }
-
-        [AllowAnonymous]
         [HttpGet]
         public async Task<IHttpActionResult> GetCart(string username)
         {
@@ -53,7 +51,5 @@ namespace LeaderTask.Controllers.API
             }
             return NotFound();
         }
-
-
         }
 }
