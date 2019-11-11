@@ -81,7 +81,7 @@ namespace LeaderTask.Data
                 Email = "Hossam000@gmail.com",
                 Phone = "01002559518",
                 Image = "https://www.deviersprong.nl/wp-content/uploads/2017/11/img-person-placeholder.jpg",
-                UserName = "amr",
+                UserName = "hossam",
                 Password = "123"
             };
             Customer customer3 = new Customer
@@ -91,7 +91,7 @@ namespace LeaderTask.Data
                 Email = "Khaled000@gmail.com",
                 Phone = "0100252518",
                 Image = "https://www.deviersprong.nl/wp-content/uploads/2017/11/img-person-placeholder.jpg",
-                UserName = "amr",
+                UserName = "khaled",
                 Password = "123"
             };
 
